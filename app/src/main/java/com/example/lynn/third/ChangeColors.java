@@ -6,6 +6,7 @@ import static com.example.lynn.third.MainActivity.*;
 
 public class ChangeColors implements Runnable {
     private Thread thread;
+    private boolean keepGoing;
 
     public int color() {
         int red = (int)(256*Math.random());
