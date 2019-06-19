@@ -28,7 +28,6 @@ public class MyListener implements View.OnClickListener {
 
             new MyThread();
 
-            new ShowLaugh();
 
         }
 
