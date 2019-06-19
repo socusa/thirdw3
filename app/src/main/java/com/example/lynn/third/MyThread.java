@@ -2,9 +2,7 @@ package com.example.lynn.third;
 
 import android.view.View;
 
-import static com.example.lynn.third.MainActivity.first;
-import static com.example.lynn.third.MainActivity.myView;
-import static com.example.lynn.third.MainActivity.second;
+import static com.example.lynn.third.MainActivity.*;
 
 public class MyThread implements Runnable {
 
@@ -36,17 +34,17 @@ public class MyThread implements Runnable {
                     first.setVisibility(View.INVISIBLE);
                     second.setVisibility(View.INVISIBLE);
 
-                    MainActivity.score += 5;
+                    score += 5;
                 } else {
                     first.setImageDrawable(MainActivity.x);
                     second.setImageDrawable(MainActivity.x);
 
-                    MainActivity.score -= 1000;
+                    score -= 1000;
                 }
 
                 first = null;
 
-                MainActivity.ready = true;
+                ready = true;
 
             }
         });
