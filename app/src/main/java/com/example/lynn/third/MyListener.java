@@ -15,14 +15,16 @@ public class MyListener implements View.OnClickListener {
 
         int id = Integer.parseInt(source.getTag().toString());
 
-        if (first == null) {
+        if (first == null && ready) {
             first = source;
 
             first.setImageDrawable(ContextCompat.getDrawable(source.getContext(),id));
-        } else {
+        } else if (ready) {
             second = source;
 
             second.setImageDrawable(ContextCompat.getDrawable(source.getContext(),id));
+
+            ready = false;
 
         }
 

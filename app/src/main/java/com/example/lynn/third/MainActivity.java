@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public static int score;
     public static ImageView first;
     public static ImageView second;
-    public static boolean ready;
+    public static boolean ready = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
