@@ -19,7 +19,7 @@ public class MyListener implements View.OnClickListener {
             first = source;
 
             first.setImageDrawable(ContextCompat.getDrawable(source.getContext(),id));
-        } else if (ready) {
+        } else if (ready && first != source) {
             second = source;
 
             second.setImageDrawable(ContextCompat.getDrawable(source.getContext(),id));
