@@ -127,6 +127,8 @@ public class MyView extends RelativeLayout {
 
         scoreView.setLayoutParams(layoutParams);
 
+        scoreView.show();
+
         addView(scoreView);
 
         laugh = new ImageView(context);
