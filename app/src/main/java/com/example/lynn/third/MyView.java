@@ -89,7 +89,7 @@ public class MyView extends RelativeLayout {
 
         TableLayout table = new TableLayout(context);
 
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(2*width/3,height);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(2*width/3,height-50);
 
         setLayoutParams(layoutParams);
 
@@ -101,7 +101,7 @@ public class MyView extends RelativeLayout {
             TableRow row = new TableRow(context);
 
             for (int counter1=0;counter1<6;counter1++) {
-                TableRow.LayoutParams params = new TableRow.LayoutParams(width/9,height/6);
+                TableRow.LayoutParams params = new TableRow.LayoutParams(width/9,(height-50)/6);
 
                 images[index].setLayoutParams(params);
 
@@ -131,12 +131,14 @@ public class MyView extends RelativeLayout {
 
         laugh = new ImageView(context);
 
-        laugh.setImageDrawable(getResources().getDrawable(R.drawable.laughing));
+        laugh.setImageDrawable(getResources().getDrawable(R.drawable.hahawriting));
 
-        layoutParams = new RelativeLayout.LayoutParams(width/4,height/2);
+        layoutParams = new RelativeLayout.LayoutParams(width/4,(height-50)/2);
 
         layoutParams.addRule(RelativeLayout.BELOW,scoreView.getId());
         layoutParams.addRule(RelativeLayout.RIGHT_OF,table.getId());
+
+        laugh.setLayoutParams(layoutParams);
 
         laugh.setVisibility(INVISIBLE);
 
