@@ -101,7 +101,7 @@ public class MyView extends RelativeLayout {
             TableRow row = new TableRow(context);
 
             for (int counter1=0;counter1<6;counter1++) {
-                TableRow.LayoutParams params = new TableRow.LayoutParams(width/9,(height-150)/6);
+                TableRow.LayoutParams params = new TableRow.LayoutParams(160,160);
 
                 images[index].setLayoutParams(params);
 
