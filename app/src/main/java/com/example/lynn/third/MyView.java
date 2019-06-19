@@ -2,8 +2,11 @@ package com.example.lynn.third;
 
 import android.content.Context;
 import android.graphics.Point;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 
 import static com.example.lynn.third.MainActivity.*;
 
@@ -75,6 +78,34 @@ public class MyView extends RelativeLayout {
         images = new ImageView[36];
 
         for(int counter=0;counter<images.length;counter++) {
+            images[counter] = new ImageView(context);
+
+            images[counter].setTag("" + drawables[counter]);
+
+            images[counter].setImageDrawable(x);
+
+            images[counter].setOnClickListener(listener);
+        }
+
+        TableLayout table = new TableLayout(context);
+
+        table.setId(View.generateViewId());
+
+        int index = 0;
+
+        for (int counter=0;counter<6;counter++) {
+            TableRow row = new TableRow(context);
+
+            for (int counter1=0;counter1<6;counter1++) {
+                TableRow.LayoutParams params = new TableRow.LayoutParams(160,160);
+
+                images[index].setLayoutParams(params);
+
+                row.addView(images[index]);
+
+                index++;
+            }
+
 
         }
     }
