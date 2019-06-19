@@ -112,6 +112,16 @@ public class MyView extends RelativeLayout {
         }
 
         addView(table);
+
+        scoreView = new ScoreView(context);
+
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(width/4,height);
+
+        params.addRule(RelativeLayout.RIGHT_OF,table.getId());
+
+        scoreView.setLayoutParams(params);
+
+        addView(scoreView);
     }
 
 }
