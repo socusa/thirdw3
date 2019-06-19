@@ -91,7 +91,7 @@ public class MyView extends RelativeLayout {
 
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(2*width/3,height-150);
 
-        setLayoutParams(layoutParams);
+        table.setLayoutParams(layoutParams);
 
         table.setId(View.generateViewId());
 
@@ -129,7 +129,7 @@ public class MyView extends RelativeLayout {
 
         scoreView.show();
 
-     //   addView(scoreView);
+        addView(scoreView);
 
         laugh = new ImageView(context);
 
@@ -144,7 +144,7 @@ public class MyView extends RelativeLayout {
 
         laugh.setVisibility(INVISIBLE);
 
-     //   addView(laugh);
+        addView(laugh);
     }
 
 }
