@@ -2,6 +2,7 @@ package com.example.lynn.third;
 
 import android.content.Context;
 import android.graphics.Point;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import static com.example.lynn.third.MainActivity.*;
@@ -70,6 +71,12 @@ public class MyView extends RelativeLayout {
         scramble(drawables);
 
         x = getResources().getDrawable(R.drawable.x);
+
+        images = new ImageView[36];
+
+        for(int counter=0;counter<images.length;counter++) {
+
+        }
     }
 
 }
