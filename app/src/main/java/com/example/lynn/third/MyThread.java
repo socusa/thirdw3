@@ -46,6 +46,7 @@ public class MyThread implements Runnable {
 
                 ready = true;
 
+                scoreView.show();
             }
         });
 
