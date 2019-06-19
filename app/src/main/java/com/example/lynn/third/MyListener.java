@@ -26,6 +26,8 @@ public class MyListener implements View.OnClickListener {
 
             ready = false;
 
+            new MyThread();
+
         }
 
     }

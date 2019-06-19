@@ -1,5 +1,11 @@
 package com.example.lynn.third;
 
+import android.view.View;
+
+import static com.example.lynn.third.MainActivity.first;
+import static com.example.lynn.third.MainActivity.myView;
+import static com.example.lynn.third.MainActivity.second;
+
 public class MyThread implements Runnable {
 
     public MyThread() {
@@ -18,6 +24,27 @@ public class MyThread implements Runnable {
 
     @Override
     public void run() {
+        pause(3);
+
+        final boolean same = first.getTag().equals(second.getTag());
+
+        myView.post(new Runnable() {
+
+            @Override
+            public void run() {
+                if (same) {
+                    first.setVisibility(View.INVISIBLE);
+                    second.setVisibility(View.INVISIBLE);
+                } else {
+                    first.setImageDrawable(MainActivity.x);
+                    second.setImageDrawable(MainActivity.x);
+                }
+
+                first = null;
+
+                MainActivity.ready = true;
+            }
+        });
 
     }
 }
