@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     public static Drawable x;
     public static int width;
     public static int height;
+    public static int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
