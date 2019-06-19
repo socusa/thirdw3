@@ -89,7 +89,7 @@ public class MyView extends RelativeLayout {
 
         TableLayout table = new TableLayout(context);
 
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(2*width/3,height-50);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(2*width/3,height-100);
 
         setLayoutParams(layoutParams);
 
@@ -101,7 +101,7 @@ public class MyView extends RelativeLayout {
             TableRow row = new TableRow(context);
 
             for (int counter1=0;counter1<6;counter1++) {
-                TableRow.LayoutParams params = new TableRow.LayoutParams(width/9,(height-50)/6);
+                TableRow.LayoutParams params = new TableRow.LayoutParams(width/9,(height-100)/6);
 
                 images[index].setLayoutParams(params);
 
