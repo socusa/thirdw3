@@ -129,7 +129,7 @@ public class MyView extends RelativeLayout {
 
         scoreView.show();
 
-        addView(scoreView);
+     //   addView(scoreView);
 
         laugh = new ImageView(context);
 
@@ -144,7 +144,7 @@ public class MyView extends RelativeLayout {
 
         laugh.setVisibility(INVISIBLE);
 
-        addView(laugh);
+     //   addView(laugh);
     }
 
 }
