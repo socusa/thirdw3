@@ -121,7 +121,7 @@ public class MyView extends RelativeLayout {
 
         scoreView.setId(View.generateViewId());
 
-        layoutParams = new RelativeLayout.LayoutParams(width/4,height/2);
+        layoutParams = new RelativeLayout.LayoutParams(width/3,height/2);
 
         layoutParams.addRule(RelativeLayout.RIGHT_OF,table.getId());
 
@@ -135,7 +135,7 @@ public class MyView extends RelativeLayout {
 
         laugh.setImageDrawable(getResources().getDrawable(R.drawable.hahawriting));
 
-        layoutParams = new RelativeLayout.LayoutParams(width/4,(height-50)/2);
+        layoutParams = new RelativeLayout.LayoutParams(width/3,(height-50)/2);
 
         layoutParams.addRule(RelativeLayout.BELOW,scoreView.getId());
         layoutParams.addRule(RelativeLayout.RIGHT_OF,table.getId());
