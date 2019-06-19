@@ -106,8 +106,12 @@ public class MyView extends RelativeLayout {
                 index++;
             }
 
+            table.addView(row);
+
 
         }
+
+        addView(table);
     }
 
 }
