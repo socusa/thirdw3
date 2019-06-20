@@ -23,17 +23,7 @@ public class MyThread implements Runnable {
     }
 
     private void fade(View view) {
-        ObjectAnimator animator = ObjectAnimator.ofFloat(view,"rotation",0,360);
 
-        ObjectAnimator animator1 = ObjectAnimator.ofFloat(view,"alpha",1,0);
-
-        AnimatorSet set = new AnimatorSet();
-
-        set.play(animator).with(animator1);
-
-        set.setDuration(2000);
-
-        set.start();
     }
 
     @Override
@@ -55,8 +45,8 @@ public class MyThread implements Runnable {
 
                     score += 5;
                 } else {
-                    first.setImageDrawable(MainActivity.x);
-                    second.setImageDrawable(MainActivity.x);
+                    first.setImageDrawable(x);
+                    second.setImageDrawable(x);
 
                     score -= 1000;
 
