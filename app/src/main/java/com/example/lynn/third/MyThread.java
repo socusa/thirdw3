@@ -23,6 +23,17 @@ public class MyThread implements Runnable {
     }
 
     private void fade(View view) {
+        ObjectAnimator animation1 = ObjectAnimator.ofFloat(view,"rotation",0,360);
+
+        ObjectAnimator animation2 = ObjectAnimator.ofFloat(view,"alpha",1,0);
+
+        AnimatorSet set = new AnimatorSet();
+
+        set.play(animation2).with(animation1);
+
+        set.setDuration(2000);
+
+        set.start();
 
     }
 
